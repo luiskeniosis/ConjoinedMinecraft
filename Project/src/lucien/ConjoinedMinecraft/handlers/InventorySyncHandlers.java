@@ -8,6 +8,7 @@ import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.EntityPickupItemEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryDragEvent;
@@ -103,6 +104,17 @@ public class InventorySyncHandlers implements Listener {
 		interactControllerInventoryChange();
 	    else if(player.equals(Main.movementController))
 		movementControllerInventoryChange();
+	}
+    }
+    
+    @EventHandler
+    public void handle(BlockPlaceEvent event) {
+	if(Main.isConjoined == true) {
+	    UUID player = event.getPlayer().getUniqueId();
+	    if(player.equals(Main.interactionController))
+		interactControllerInventoryChange();
+	    else if(player.equals(Main.movementController))
+		event.setCancelled(true);
 	}
     }
 

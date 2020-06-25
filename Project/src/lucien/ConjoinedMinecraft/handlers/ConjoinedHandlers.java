@@ -5,7 +5,7 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.EntityTargetLivingEntityEvent;
+import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityToggleSwimEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
@@ -33,16 +33,23 @@ public class ConjoinedHandlers implements Listener {
 	    event.setCancelled(true);
     }
 
-    @EventHandler
+    /*@EventHandler
     public void handle(EntityTargetLivingEntityEvent event) {
 	if(Main.isConjoined == true && event.getTarget().getUniqueId().equals(Main.interactionController))
 	    event.setTarget(Bukkit.getPlayer(Main.movementController));
-    }
+    }*/
 
     @EventHandler
     public void handle(EntityToggleSwimEvent event) {
 	if(Main.isConjoined == true && event.getEntityType() == EntityType.PLAYER && event.getEntity().getUniqueId().equals(Main.movementController)) {
 	    Bukkit.getPlayer(Main.interactionController).setSwimming(true);
+	}
+    }
+    
+    @EventHandler
+    public void handle(EntityDamageByEntityEvent event) {
+	if(Main.isConjoined == true && event.getDamager().getType() == EntityType.PLAYER && event.getDamager().getUniqueId().equals(Main.movementController)) {
+	    event.setCancelled(true);
 	}
     }
 }
