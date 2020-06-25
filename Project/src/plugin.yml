@@ -1,0 +1,16 @@
+main: lucien.ConjoinedMinecraft.game.Main
+name: ConjoinedMinecraft
+version: testing
+author: Lucien
+prefix: LucienAI
+api-version: 1.15
+website: http://pornhub.com
+commands:
+  movement:
+    description: Assigns a player to control movement.
+  interact:
+    description: Assigns a player to control interactions.
+  conjoin:
+    description: Begins the conjoined minecraft experience.
+  test:
+    description: Test command. For testing only...
