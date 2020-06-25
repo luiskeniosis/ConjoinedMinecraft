@@ -7,4 +7,4 @@ With this plugin, two players will be conjoined. One player will be the onlye on
 **/interact (playerName)** to assign a player to control interactions.  
 **/conjoin** to start the conjoined minecraft experience once a player has been assigned to both roles.  
 
-Coded in <hour(s)> at 5:34am on 6/25/2020 after not being able to sleep.
+Coded at 5:34am on 6/25/2020 after not being able to sleep. V 1.0 finished at 10:38am.
