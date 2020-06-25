@@ -1,5 +1,6 @@
 # ConjoinedMinecraft
 *Ever want to play as conjoined twins with a friend in minecraft? No? Here's a plugin anyways. Idea from Dream, as usual.*  
+
 With this plugin, two players will be conjoined. One player will be the onlye one able to control movement, while the other player is the only one able to interact with the world.  
 
 **/movement (playerName)** to Assign a player to control movement.  
