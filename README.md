@@ -1,3 +1,4 @@
+Spigot Page: https://www.spigotmc.org/resources/conjoinedminecraft-2-players-control-1-character.80668/
 # ConjoinedMinecraft
 *Ever want to play as conjoined twins with a friend in minecraft? No? Here's a plugin anyways. Idea from Dream, as usual.*  
 
